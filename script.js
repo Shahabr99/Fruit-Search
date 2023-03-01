@@ -95,8 +95,8 @@ function search(str) {
 }
 
 function searchHandler(e) {
-  let letter = e.key;
-  word += letter.toLowerCase();
+  const word = e.target.value;
+  console.log(input.value);
   const result = search(word);
   showSuggestions(result, word);
 }
@@ -109,7 +109,6 @@ function showSuggestions(results, inputVal) {
     const list = document.createElement("li");
     list.classList.add("list");
     list.innerText = word;
-    console.log(list);
     ul.append(list);
 
     input.value === ""
@@ -121,7 +120,7 @@ function showSuggestions(results, inputVal) {
 function useSuggestion(e) {
   if (e.target.className === "list") {
     input.value = e.target.innerText;
-    ul.classList.remove("has-suggestions");
+    suggestions.style.display = "none";
   }
 }
 

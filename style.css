@@ -19,6 +19,7 @@ body {
   font-size: 30px;
   letter-spacing: 10px;
   position: relative;
+  text-align: center;
 }
 
 span {
@@ -32,7 +33,7 @@ span::after {
   height: 70px;
   background-color: lime;
   transform: skewX(20deg);
-  left: -10px;
+  left: 67px;
   z-index: -1;
 }
 
@@ -63,7 +64,7 @@ input {
 
 .contain {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -79,11 +80,17 @@ ul.has-suggestions {
   display: block;
 }
 
+.suggestions {
+  display: block;
+}
+
 ul {
   background-color: #eee;
   display: flex;
   flex-direction: column;
-  display: none;
+  display: block;
+  position: absolute;
+  width: 298px;
 }
 
 ul li {
