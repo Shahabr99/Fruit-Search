@@ -1,5 +1,6 @@
 const input = document.querySelector("#fruit");
 const suggestions = document.querySelector(".suggestions ul");
+const btn = document.querySelector(".search");
 const ul = document.querySelector(".list-container");
 
 const fruit = [
@@ -95,8 +96,10 @@ function search(str) {
 }
 
 function searchHandler(e) {
+  if (e.target.value === "") {
+    suggestions.style.display = "none";
+  }
   const word = e.target.value;
-  console.log(input.value);
   const result = search(word);
   showSuggestions(result, word);
 }
@@ -125,4 +128,5 @@ function useSuggestion(e) {
 }
 
 input.addEventListener("keyup", searchHandler);
+btn.addEventListener("click", searchHandler);
 suggestions.addEventListener("click", useSuggestion);

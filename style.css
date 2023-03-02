@@ -55,6 +55,11 @@ input {
   height: 40px;
   border: 1px solid;
   text-align: center;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: lightsalmon;
 }
 
 .mag-search {
@@ -91,6 +96,7 @@ ul {
   display: block;
   position: absolute;
   width: 298px;
+  overflow: hidden;
 }
 
 ul li {
